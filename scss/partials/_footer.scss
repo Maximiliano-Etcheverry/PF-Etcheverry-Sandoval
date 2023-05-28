@@ -1,0 +1,98 @@
+footer{
+    @include justify(space-between);
+    padding-top: 45px;
+    background: rgb(255,199,44);
+    background: linear-gradient(0deg, rgba(255,199,44,1) 0%, rgba(0,47,108,1) 86%);
+    height: 200px;
+    position: relative;
+    a{
+        text-decoration: none;
+    }
+    li{
+        list-style-type: none;
+    } 
+    h3{
+        font-weight: bolder;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        color: $color-blanco;   
+        text-align: center; 
+    }
+    .caja-1{
+        margin: 10px;
+        width: 30%;
+        height: 10%;
+        .caja-1-cont{
+            @include justify(space-between);
+            align-items: center;
+            .footer-nba{
+                img{
+                    width: 100px;
+                }
+            }
+            .footer-spalding{
+                @extend .footer-nba;
+            } 
+            .footer-tnt{
+                @extend .footer-nba;
+            }  
+        }
+    }
+    .caja-2{
+        margin: 10px; 
+        position: absolute;
+        left: 45%;
+        .caja-2-community{
+            font-size: 15px;
+            color: $color-blanco;
+            &:hover{
+                color: map-get($colores, rojo);
+                font-size: 20px;  
+            }
+        } 
+        .caja-2-donation{
+            font-size: 15px;
+            color: $color-blanco;
+            &:hover{
+                color: map-get($colores, rojo);
+                font-size: 20px;  
+            }
+        } 
+    }
+    .caja-3{
+        padding-right: 25px;
+        margin: 10px;
+        div{
+            a{
+                font-size: 50px;  
+                font-size: 30px;
+                color: $color-blanco;
+                .bi-facebook{
+                    &:hover{
+                        color: #2f55a4;
+                    }
+                }
+                .bi-instagram{
+                    &:hover{
+                        color: #C13584; 
+                    }
+                }
+                .bi-tiktok{
+                    &:hover{
+                        color: #010101;
+                    }
+                }
+                .bi-youtube{
+                    &:hover{
+                        color: #FF0000;      
+                    }
+                }
+                .bi-twitter{
+                    &:hover{
+                        color: #00acee;
+                    }
+                }  
+            }
+            
+        }
+    }           
+}
